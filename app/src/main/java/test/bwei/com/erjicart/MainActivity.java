@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
                     for (Goods goods : goodsInfos.get(fpos).list) {
                         if (!goods.status) {
                             goods.status=true;
-                            sunprice = sunprice + goods.price*goodsInfos.get(fpos).list.get(fpos).num;
+                            sunprice = sunprice + goods.price*goods.num;
                         }
                     }
                     sum.setText(sunprice + "");
@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
                     for (Goods goods : goodsInfos.get(fpos).list) {
                         if (goods.status) {
                             goods.status=false;
-                            sunprice = sunprice - goods.price*goodsInfos.get(fpos).list.get(fpos).num;
+                            sunprice = sunprice - goods.price*goods.num;
                         }
                     }
                     sum.setText(sunprice + "");
